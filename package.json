@@ -1,0 +1,9 @@
+{
+  "name": "jdLYNC.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jdLYNC/jdLYNC.github.io",
+  "author": "jdLYNC <joshlynch@live.co.uk>",
+  "license": "MIT",
+  "dependencies": {}
+}

@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'defaultText';
+  src: url("./fonts/Avenir.otf"); }
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: defaultText; }
+  body nav {
+    position: fixed;
+    background-color: #ffffff;
+    width: 100vw;
+    margin: 0;
+    border-bottom: 1px solid black; }
+    body nav ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      body nav ul a {
+        text-decoration: none; }
+        body nav ul a :hover {
+          background-color: #eeeeee; }
+        body nav ul a li {
+          background-color: #ffffff;
+          width: 33vw;
+          padding: 10px 0;
+          text-align: center; }
+  body section {
+    margin: 10vh 10vw;
+    width: 80vw; }
+    body section article h3 {
+      margin: 50px 10% 0; }
+      @media (max-width: 415px) {
+        body section article h3 {
+          margin: 50px 0 0; } }
+    body section article img {
+      margin: 10px 10%;
+      width: 80%; }
+      @media (max-width: 415px) {
+        body section article img {
+          margin: 10px 0;
+          width: 100%; } }
+    body section article div {
+      display: flex;
+      justify-content: center; }
+      body section article div a {
+        margin: 20px 50px; }
+        body section article div a img {
+          height: 80px;
+          width: 80px; }
+
+.parallax {
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end; }
+
+.prlx-1 {
+  background-image: url(./images/david-clode.jpg); }
+  .prlx-1 h1 {
+    color: #ffffff;
+    font-size: 3em;
+    margin: 5px 10px; }
+
+.prlx-2 {
+  background-image: url(./images/david-clode-2.jpg); }
+
+/*# sourceMappingURL=style.css.map */

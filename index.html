@@ -1,1 +1,57 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Josh Lynch - JavaScript Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <nav>
+      <ul>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>My Work</li></a>
+        <a href="#"><li>Contact</li></a>
+      </ul>
+    </nav>
+
+    <div class="parallax prlx-1">
+      <h1>Josh Lynch<br>
+        Web Developer</h1>
+    </div>
+
+    <section>
+      <h2>About</h2>
+      <p>Initially my interest in coding stemmed from a love of gaming. Wanting to make my own games, I realised I needed to be able to code, so began to learn the basics. Over time this interest broadened to programming more generally.</p>
+      <p>My previous career was as a scuba instructor. I loved this job but overtime grew to desire something that would challenge me more and provide greater intellectual and creative satisfaction. Coding offered this potential which led me to study web development at GA and make this my profession.</p>
+      <p>For my first junior role I am seeking a full-stack position in a well established dev team. Somewhere I can grow my skills, tackle interesting problems and learn from more senior developers.</p>
+    </section>
+
+    <div class="parallax prlx-2">
+    </div>
+
+    <section>
+      <h2>My Work</h2>
+      <p>A twelve week immersive career change program, designed to accelerate students’ learning development and provide the skills necessary to enter the industry as a junior full-stack JavaScript developer in three months.</p>
+
+      <article>
+        <h3>Diveboard</h3>
+        <img src="./images/diveboard1.png" alt="diveboard homepage">
+        <p>I created Diveboard as a better alternative to the job sites the industry currently uses.  A MERN stack app, Diveboard integrates GoogleMaps, Places and Rest Countries APIs, bcrypt and JWT for user authentication, Axios and bluebird for http requests and bootstrap styling.</p>
+        <p>Approaching the build I committed significant time to planning, producing a comprehensive Trello board and wireframes.  I practiced TDD on the back end and wrote 61 API tests.  The React app is responsive with key pathways developed mobile first.</p>
+        <p>The primary challenge with this app was obtaining all the desired location information as GooglePlaces lacked regional data.  This necessitated an additional request to Rest Countries during registration, for which managing the promises was a challenge.</p>
+        <div>
+          <a href="https://github.com/jdLYNC/wdi-project-4">
+            <img src="./images/github-logo.png" alt="github">
+          </a>
+          <a href="https://dive-board.herokuapp.com/">
+            <img src="./images/heroku-logo-purple.png" alt="heroku">
+          </a>
+        </div>
+      </article>
+
+    </section>
+
+  </body>
+</html>

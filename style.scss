@@ -1,0 +1,95 @@
+$background: #ffffff;
+$highlight: #eeeeee;
+$invis: rgba(0,0,0,0);
+
+@font-face {
+  font-family: 'defaultText';
+  src: url('./fonts/Avenir.otf');
+}
+
+body {
+  margin: 0;
+  background-color: $background;
+  font-family: defaultText;
+  nav {
+    position: fixed;
+    background-color: $background;
+    width: 100vw;
+    margin: 0;
+    border-bottom: 1px solid black;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      a {
+        text-decoration: none;
+        :hover {
+          background-color: $highlight;
+        }
+        li {
+          background-color: $background;
+          width: 33vw;
+          padding: 10px 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  section {
+    margin: 10vh 10vw;
+    width: 80vw;
+    article {
+      h3 {
+        margin: 50px 10% 0;
+        @media (max-width: 415px) {
+          margin: 50px 0 0;
+        }
+      }
+      img {
+        margin: 10px 10%;
+        width: 80%;
+        @media (max-width: 415px) {
+          margin: 10px 0;
+          width: 100%;
+        }
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        a {
+          margin: 20px 50px;
+          img {
+            height: 80px;
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.parallax {
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.prlx-1 {
+  background-image: url(./images/david-clode.jpg);
+  h1 {
+    color: $background;
+    font-size: 3em;
+    margin: 5px 10px;
+  }
+}
+
+.prlx-2 {
+  background-image: url(./images/david-clode-2.jpg);
+}
