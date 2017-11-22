@@ -2,6 +2,8 @@ let currentProject = null;
 
 $(() => {
 
+  const $hashLink = $('ul').children();
+
   const $projectSelector = $('#project-selector');
 
   const $diveboardBtn = $('#diveboard-btn');
@@ -24,6 +26,19 @@ $(() => {
 
     currentProject = element;
   }
+
+  $hashLink.click(function(e) {
+    e.preventDefault();
+    const $dest = $(this.location.hash);
+
+    console.log($dest);
+
+    // e.preventDefault();
+
+    // e.preventDefault();
+    // console.log(e);
+    // console.log($(e.hash).offset().top);
+  });
 
   $diveboardBtn.click(() => toggleHidden($diveboard));
   $bemoBtn.click(() => toggleHidden($bemo));
