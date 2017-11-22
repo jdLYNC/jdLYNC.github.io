@@ -5,6 +5,9 @@
     <title>Josh Lynch - JavaScript Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/9508f7d60b.js"></script>
+    <script src="./app.js"></script>
   </head>
   <body>
 
@@ -32,25 +35,98 @@
     </div>
 
     <section>
-      <h2>My Work</h2>
-      <p>A twelve week immersive career change program, designed to accelerate students’ learning development and provide the skills necessary to enter the industry as a junior full-stack JavaScript developer in three months.</p>
-
       <article>
-        <h3>Diveboard</h3>
-        <img src="./images/diveboard1.png" alt="diveboard homepage">
-        <p>I created Diveboard as a better alternative to the job sites the industry currently uses.  A MERN stack app, Diveboard integrates GoogleMaps, Places and Rest Countries APIs, bcrypt and JWT for user authentication, Axios and bluebird for http requests and bootstrap styling.</p>
-        <p>Approaching the build I committed significant time to planning, producing a comprehensive Trello board and wireframes.  I practiced TDD on the back end and wrote 61 API tests.  The React app is responsive with key pathways developed mobile first.</p>
-        <p>The primary challenge with this app was obtaining all the desired location information as GooglePlaces lacked regional data.  This necessitated an additional request to Rest Countries during registration, for which managing the promises was a challenge.</p>
-        <div>
-          <a href="https://github.com/jdLYNC/wdi-project-4">
-            <img src="./images/github-logo.png" alt="github">
+        <h2>My Work</h2>
+        <p>A twelve week immersive career change program, designed to accelerate students’ learning development and provide the skills necessary to enter the industry as a junior full-stack JavaScript developer in three months.</p>
+      </article>
+
+      <div id="project-selector">
+        <img src="./images/projects/diveboard1.jpg" alt="diveboard homepage" id="diveboard-btn">
+        <img src="./images/projects/bemo.jpg" alt="bemo homepage" id="bemo-btn">
+        <img src="./images/projects/roquette.jpg" alt="roquette homepage" id="roquette-btn">
+        <img src="./images/projects/shapes.jpg" alt="shapes game" id="shapes-btn">
+      </div>
+
+       <article id="diveboard" class="hidden">
+        <h3>Diveboard
+          <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        </h3>
+          <img src="./images/projects/diveboard1.jpg" alt="diveboard homepage">
+          <p>I created Diveboard as a better alternative to the job sites the industry currently uses.  A MERN stack app, Diveboard integrates GoogleMaps, Places and Rest Countries APIs, bcrypt and JWT for user authentication, Axios and bluebird for http requests and bootstrap styling.</p>
+        <div class="links">
+          <a href="https://github.com/jdLYNC/wdi-project-4" target="_blank">
+            <img src="./images/icons/github.png" alt="github">
           </a>
-          <a href="https://dive-board.herokuapp.com/">
-            <img src="./images/heroku-logo-purple.png" alt="heroku">
+          <a href="https://dive-board.herokuapp.com/" target="_blank">
+            <img src="./images/icons/heroku.png" alt="heroku">
           </a>
         </div>
       </article>
 
+      <article id="bemo" class="hidden">
+        <h3>Bemo
+          <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        </h3>
+          <img src="./images/projects/bemo.jpg" alt="diveboard homepage">
+          <p>Project 3 was a MEAN stack team project. Our team of two made a social travel app. Primarily I was responsible for integrating external APIs and organising team work ow through Trello. Features I independently contributed include a GoogleMap directive with contextual paths and markers, and geocoding services that enabled users to upload locations via GooglePlaces or a pin drop.</p>
+        <div class="links">
+          <a href="https://github.com/jdLYNC/wdi-project-3" target="_blank">
+            <img src="./images/icons/github.png" alt="github">
+          </a>
+          <a href="https://bemo-app.herokuapp.com/" target="_blank">
+            <img src="./images/icons/heroku.png" alt="heroku">
+          </a>
+        </div>
+      </article>
+
+      <article id="roquette" class="hidden">
+        <h3>Roquette
+          <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        </h3>
+          <img src="./images/projects/roquette.jpg" alt="diveboard homepage">
+          <p>Project two was a mini-project to build a RESTful app. Roquette was an Instagram-esque site with pictures of rockets. The build featured three models, including one to facilitate direct messaging and bcrypt for secure user authentication.</p>
+        <div class="links">
+          <a href="https://github.com/jdLYNC/wdi-project-2" target="_blank">
+            <img src="./images/icons/github.png" alt="github">
+          </a>
+          <a href="https://roquette.herokuapp.com/" target="_blank">
+            <img src="./images/icons/heroku.png" alt="heroku">
+          </a>
+        </div>
+      </article>
+
+      <article id="shapes" class="hidden">
+        <h3>Shapes
+          <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        </h3>
+          <img src="./images/projects/shapes.jpg" alt="shapes game">
+          <p>The brief for project one was to create a browser game using front end technologies. I created a hole-in- the-wall style game primarily utilising jQuery for gameplay and animation, and vanilla JS for the logic. I found working on the JS game logic especially interesting.</p>
+        <div class="links">
+          <a href="https://github.com/jdLYNC/wdi-project-1" target="_blank">
+            <img src="./images/icons/github.png" alt="github">
+          </a>
+          <a href="https://shapes-app.herokuapp.com/" target="_blank">
+            <img src="./images/icons/heroku.png" alt="heroku">
+          </a>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="parallax prlx-3">
+    </div>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Thanks for taking the time to check out my work.  I'd love to hear from you so please reach out if you'd like to know more!</p>
+      <div class="links">
+        <a href="mailto:info@joshlynch.co.uk">
+          <img src="./images/icons/email.png" alt="email">
+        </a>
+        <a href="https://www.linkedin.com/in/josh-lynch/">
+          <img src="./images/icons/linkedin.png" alt="linkedin">
+        </a>
+      </div>
     </section>
 
   </body>

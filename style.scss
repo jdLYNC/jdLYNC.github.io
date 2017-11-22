@@ -1,6 +1,7 @@
 $background: #ffffff;
 $highlight: #eeeeee;
 $invis: rgba(0,0,0,0);
+$text: #000000;
 
 @font-face {
   font-family: 'defaultText';
@@ -16,7 +17,7 @@ body {
     background-color: $background;
     width: 100vw;
     margin: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $text;
     ul {
       display: flex;
       justify-content: space-around;
@@ -24,11 +25,14 @@ body {
       margin: 0;
       padding: 0;
       a {
+        z-index: 1;
         text-decoration: none;
+        color: $text;
         :hover {
           background-color: $highlight;
         }
         li {
+          z-index: 1;
           background-color: $background;
           width: 33vw;
           padding: 10px 0;
@@ -41,30 +45,57 @@ body {
   section {
     margin: 10vh 10vw;
     width: 80vw;
-    article {
-      h3 {
-        margin: 50px 10% 0;
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      img {
+        width: 40%;
+        height: 100%;
+        border: solid 1px #eeeeee;
+        margin: 5px;
         @media (max-width: 415px) {
-          margin: 50px 0 0;
+          width: 100%;
+          margin: 5px 0;
+        }
+      }
+      img:hover {
+        opacity: 0.5;
+      }
+    }
+    article {
+      margin: 50px 10% 0;
+      @media (max-width: 415px) {
+        margin: 50px 0 0;
+      }
+      h3 {
+        display: flex;
+        justify-content: space-between;
+        span {
+          font-size: 1.5em;
+          i {
+            color: grey;
+          }
+          i:hover {
+            color: black;
+          }
         }
       }
       img {
-        margin: 10px 10%;
-        width: 80%;
-        @media (max-width: 415px) {
-          margin: 10px 0;
-          width: 100%;
-        }
+        width: 100%;
       }
-      div {
-        display: flex;
-        justify-content: center;
-        a {
-          margin: 20px 50px;
-          img {
-            height: 80px;
-            width: 80px;
-          }
+    }
+    div.links {
+      flex-wrap: nowrap;
+      a {
+        margin: 20px 50px;
+        :hover {
+          opacity: 0.5;
+        }
+        img {
+          height: 80px;
+          width: 80px;
+          border: none;
         }
       }
     }
@@ -72,7 +103,7 @@ body {
 }
 
 .parallax {
-  height: 80vh;
+  height: 70vh;
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -82,14 +113,23 @@ body {
 }
 
 .prlx-1 {
-  background-image: url(./images/david-clode.jpg);
+  background-image: url(./images/parallax/jakob-owens.jpg);
+  height: 90vh;
   h1 {
     color: $background;
     font-size: 3em;
-    margin: 5px 10px;
+    margin: 10px;
   }
 }
 
 .prlx-2 {
-  background-image: url(./images/david-clode-2.jpg);
+  background-image: url(./images/parallax/david-clode.jpg);
+}
+
+.prlx-3 {
+  background-image: url(./images/parallax/uriel-soberanes.jpg);
+}
+
+.hidden {
+  display: none;
 }

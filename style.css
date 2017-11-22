@@ -10,7 +10,7 @@ body {
     background-color: #ffffff;
     width: 100vw;
     margin: 0;
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid #000000; }
     body nav ul {
       display: flex;
       justify-content: space-around;
@@ -18,10 +18,13 @@ body {
       margin: 0;
       padding: 0; }
       body nav ul a {
-        text-decoration: none; }
+        z-index: 1;
+        text-decoration: none;
+        color: #000000; }
         body nav ul a :hover {
           background-color: #eeeeee; }
         body nav ul a li {
+          z-index: 1;
           background-color: #ffffff;
           width: 33vw;
           padding: 10px 0;
@@ -29,29 +32,50 @@ body {
   body section {
     margin: 10vh 10vw;
     width: 80vw; }
-    body section article h3 {
+    body section div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      body section div img {
+        width: 40%;
+        height: 100%;
+        border: solid 1px #eeeeee;
+        margin: 5px; }
+        @media (max-width: 415px) {
+          body section div img {
+            width: 100%;
+            margin: 5px 0; } }
+      body section div img:hover {
+        opacity: 0.5; }
+    body section article {
       margin: 50px 10% 0; }
       @media (max-width: 415px) {
-        body section article h3 {
+        body section article {
           margin: 50px 0 0; } }
-    body section article img {
-      margin: 10px 10%;
-      width: 80%; }
-      @media (max-width: 415px) {
-        body section article img {
-          margin: 10px 0;
-          width: 100%; } }
-    body section article div {
-      display: flex;
-      justify-content: center; }
-      body section article div a {
+      body section article h3 {
+        display: flex;
+        justify-content: space-between; }
+        body section article h3 span {
+          font-size: 1.5em; }
+          body section article h3 span i {
+            color: grey; }
+          body section article h3 span i:hover {
+            color: black; }
+      body section article img {
+        width: 100%; }
+    body section div.links {
+      flex-wrap: nowrap; }
+      body section div.links a {
         margin: 20px 50px; }
-        body section article div a img {
+        body section div.links a :hover {
+          opacity: 0.5; }
+        body section div.links a img {
           height: 80px;
-          width: 80px; }
+          width: 80px;
+          border: none; }
 
 .parallax {
-  height: 80vh;
+  height: 70vh;
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -60,13 +84,20 @@ body {
   align-items: flex-end; }
 
 .prlx-1 {
-  background-image: url(./images/david-clode.jpg); }
+  background-image: url(./images/parallax/jakob-owens.jpg);
+  height: 90vh; }
   .prlx-1 h1 {
     color: #ffffff;
     font-size: 3em;
-    margin: 5px 10px; }
+    margin: 10px; }
 
 .prlx-2 {
-  background-image: url(./images/david-clode-2.jpg); }
+  background-image: url(./images/parallax/david-clode.jpg); }
+
+.prlx-3 {
+  background-image: url(./images/parallax/uriel-soberanes.jpg); }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
