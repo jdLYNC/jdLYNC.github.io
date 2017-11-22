@@ -10,7 +10,7 @@ body {
     background-color: #ffffff;
     width: 100vw;
     margin: 0;
-    border-bottom: 1px solid #000000; }
+    border-bottom: 1px solid #eeeeee; }
     body nav ul {
       display: flex;
       justify-content: space-around;

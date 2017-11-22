@@ -1,24 +1,23 @@
-let currentProject = null;
-
 $(() => {
+  // ________________________________Variables________________________________
 
-  const $hashLink = $('ul').children();
 
+  const $scrollPos = $('html, body');
+  const $links = $('ul').children();
+
+  let currentProject = null;
   const $projectSelector = $('#project-selector');
-
   const $diveboardBtn = $('#diveboard-btn');
   const $diveboard = $('#diveboard');
-
   const $bemoBtn = $('#bemo-btn');
   const $bemo = $('#bemo');
-
   const $roquetteBtn = $('#roquette-btn');
   const $roquette = $('#roquette');
-
   const $shapesBtn = $('#shapes-btn');
   const $shapes = $('#shapes');
-
   const $closeBtn = $('i');
+
+  // ________________________________Functions________________________________
 
   function toggleHidden(element) {
     element.toggleClass('hidden');
@@ -27,18 +26,22 @@ $(() => {
     currentProject = element;
   }
 
-  $hashLink.click(function(e) {
+  function setHash(hash) {
+    window.location.hash = '-' + hash;
+  }
+
+  function smoothScroll(e) {
     e.preventDefault();
-    const $dest = $(this.location.hash);
 
-    console.log($dest);
+    const $dest = $(this.hash);
+    $scrollPos.animate({
+      scrollTop: $dest.offset().top - 100
+    }, 1000, () => setHash($dest[0].id));
+  }
 
-    // e.preventDefault();
+  // _____________________________Event Listeners_____________________________
 
-    // e.preventDefault();
-    // console.log(e);
-    // console.log($(e.hash).offset().top);
-  });
+  $links.click(smoothScroll);
 
   $diveboardBtn.click(() => toggleHidden($diveboard));
   $bemoBtn.click(() => toggleHidden($bemo));
