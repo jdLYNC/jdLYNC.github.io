@@ -110,6 +110,10 @@ body {
   background-size: cover;
   display: flex;
   align-items: flex-end;
+  @media (max-width: 415px) {
+    background-attachment: scroll;
+    background-size: auto;
+  }
 }
 
 .prlx-1 {
