@@ -112,7 +112,6 @@ body {
   align-items: flex-end;
   @media (max-width: 415px) {
     background-attachment: scroll;
-    background-size: auto;
   }
 }
 
@@ -123,9 +122,6 @@ body {
     color: $background;
     font-size: 3em;
     margin: 10px;
-    @media (max-width: 350px) {
-      font-size: 1em;
-    }
   }
 }
 
