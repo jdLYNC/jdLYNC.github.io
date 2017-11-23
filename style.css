@@ -85,7 +85,6 @@ body {
   @media (max-width: 415px) {
     .parallax {
       background-attachment: scroll;
-      background-size: auto;
       background-position: center; } }
 
 .prlx-1 {
