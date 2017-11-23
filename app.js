@@ -1,9 +1,11 @@
 $(() => {
   // ________________________________Variables________________________________
 
+  const $window = $(window);
 
   const $scrollPos = $('html, body');
   const $links = $('ul').children();
+  let hashLocations = [];
 
   let currentProject = null;
   const $projectSelector = $('#project-selector');
@@ -17,7 +19,9 @@ $(() => {
   const $shapes = $('#shapes');
   const $closeBtn = $('i');
 
-  // ________________________________Functions________________________________
+  // __________________________________Logic__________________________________
+
+
 
   function toggleHidden(element) {
     element.toggleClass('hidden');
@@ -28,6 +32,22 @@ $(() => {
 
   function setHash(hash) {
     window.location.hash = '-' + hash;
+  }
+
+  for (let i = 0; i < $links.length; i++) {
+    const hash = $(`${$links[i].hash}`);
+    const obj = { name: $links[i].hash, offset: hash.offset().top - 100 };
+    hashLocations.push(obj);
+  }
+
+  function checkHash() {
+    for (let i = hashLocations.length - 1; i >= 0; i--) {
+      if ($window.scrollTop() < hashLocations[i].offset) {
+        setHash(hashLocations[i].name);
+      } else {
+        setHash('');
+      }
+    }
   }
 
   function smoothScroll(e) {
@@ -42,6 +62,7 @@ $(() => {
   // _____________________________Event Listeners_____________________________
 
   $links.click(smoothScroll);
+  $window.scroll(checkHash);
 
   $diveboardBtn.click(() => toggleHidden($diveboard));
   $bemoBtn.click(() => toggleHidden($bemo));
