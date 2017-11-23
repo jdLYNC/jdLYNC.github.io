@@ -96,7 +96,7 @@ body {
     margin: 10px; }
     @media (max-width: 375px) {
       .prlx-1 h1 {
-        font-size: 2em; } }
+        font-size: 1em; } }
 
 .prlx-2 {
   background-image: url(./images/parallax/david-clode.jpg); }
