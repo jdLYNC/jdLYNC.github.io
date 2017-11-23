@@ -94,7 +94,7 @@ body {
     color: #ffffff;
     font-size: 3em;
     margin: 10px; }
-    @media (max-width: 375px) {
+    @media (max-width: 350px) {
       .prlx-1 h1 {
         font-size: 1em; } }
 
